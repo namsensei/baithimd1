@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap4</title>
+</head>
+<body>
+<p>Hãy viết một chương trình để biểu diễn hình chữ nhật, với mô tả
+    của lớp hình tròn như sau</p>
+<canvas id="myCanvas"></canvas>
+
+</body>
+<script>
+    let canvas = document.getElementById("myCanvas").getContext("2d");
+
+    class Rectangle {
+        x;
+        y;
+        width;
+        height;
+        color;
+
+        constructor(x, y, width, height, color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        }
+        render(x, y, width, height, color) {
+            canvas.fillStyle = color;
+            canvas.fillRect(x, y, width, height);
+            canvas.strokeRect(x, y, width, height)
+        }
+    }
+
+
+    let newRactangle = new Rectangle()
+    newRactangle.render(100,100,150,100, "#accbee")
+</script>
+</html>
